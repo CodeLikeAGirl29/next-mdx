@@ -8,10 +8,8 @@ import { useState } from "react";
 import { cx } from "@/src/utils";
 
 const Header = () => {
-
   const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
-
 const toggle = () =>{
   setClick(!click)
 }
@@ -22,11 +20,11 @@ const toggle = () =>{
         <button className="inline-block sm:hidden z-50" onClick={toggle} aria-label="Hamburger Menu">
           <div className="w-6 cursor-pointer transition-all ease duration-300">
             <div className="relative">
-            <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200" 
+            <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
             style={{
              transform: click ? "rotate(-45deg) translateY(0)" : "rotate(0deg) translateY(6px)"
             }}
-            
+
             >&nbsp;</span>
             <span className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
             style={{
@@ -50,7 +48,7 @@ const toggle = () =>{
         style={{
           top: click ? "1rem" : "-5rem"
          }}
-        
+
         >
             <Link href="/" className="mr-2">Home</Link>
             <Link href="/about" className="mx-2">About</Link>
