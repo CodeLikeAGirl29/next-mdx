@@ -16,15 +16,16 @@ const Footer = () => {
 	console.log(errors);
 
 	return (
-		<footer className="bg-white dark:bg-gray-900">
-			<div className="container px-6 py-12 mx-auto">
-				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-					<div className="sm:col-span-2">
-						<h1 className="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">
+		<footer className="relative bg-blueGray-200 pt-8 pb-6">
+			<div className="container mx-auto px-4">
+				<div className="flex flex-wrap text-left lg:text-left">
+					<div className="w-full lg:w-6/12 px-4">
+						<h4 className="text-3xl fonat-semibold text-blueGray-700">
+							Let&apos;s keep in touch!
+						</h4>
+						<h5 className="text-lg mt-0 mb-2 text-blueGray-600">
 							Subscribe to our newsletter to get updates.
-						</h1>
-
-						<div className="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row"></div>
+						</h5>
 					</div>
 				</div>
 
@@ -67,7 +68,10 @@ const Footer = () => {
 						aria-label="Check my profile on Github"
 						target="_blank"
 					>
-						<LuGithub className="fill-light dark:fill-dark  hover:scale-125 transition-all ease duration-200" />
+						<LuGithub
+							className="fill-light dark:fill-dark  hover:scale-125 transition-all ease duration-200"
+							size={21}
+						/>
 					</a>
 					<a
 						href={siteMetadata.dribbble}
@@ -79,25 +83,19 @@ const Footer = () => {
 					</a>
 				</div>
 
-				<div className="w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
-					<span className="text-center">
-						&copy;2023 CodeBucks. All rights reserved.
-					</span>
-					<Link
-						href="/sitemap.xml"
-						className="text-center underline my-4 md:my-0"
-					>
-						sitemap.xml
-					</Link>
-					<div className="text-center">
-						Made with &hearts; by{" "}
-						<a
-							href="https://devdreaming.com"
-							className="underline"
-							target="_blank"
-						>
-							CodeBucks
-						</a>
+				<hr className="my-6 border-gray-200 dark:border-gray-700" />
+
+				<div className="flex items-center justify-between">
+					<div className="w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
+						<span className="text-center">
+							&copy;2023 | All Rights Reserved.
+						</span>
+						<div className="text-center">
+							Made with &hearts; by{" "}
+							<a href="" className="underline" target="_blank">
+								a Developer
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
